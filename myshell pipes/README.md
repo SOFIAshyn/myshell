@@ -2,20 +2,18 @@
 
 ## Team
 
- - [Volodymyr Chernetskyi](https://github.com/chernetskyi)
+ - [Petryshyn Sofiia](https://github.com/SOFIAshyn)
 
 ## Prerequisites
 
  - **C++ compiler** - needs to support **C++17** standard
- - **CMake** 3.15+
+ - **CMake** 3.8+
  
-The rest prerequisites (such as development libraries) can be found in the [packages file](./apt_packages.txt) in the form of the apt package manager package names.
-
 ## Installing
 
 1. Clone the project.
     ```bash
-    git clone git@github.com:chernetskyi/cpp-template.git
+    git clone git@github.com/SOFIAshyn/myshell.git
     ```
 2. Install required libraries. On Ubuntu:
    ```bash
@@ -23,16 +21,38 @@ The rest prerequisites (such as development libraries) can be found in the [pack
    ```
 3. Build.
     ```bash
-    cmake -G"Unix Makefiles" -Bbuild
-    cmake --build build
+    mkdir build
+    cd build
+    cmake ../
+    make
+    ./myshell
     ```
-
 ## Usage
-
-```bash
-add [a] [b]
-```
-
-If less than two numbers provided, zeroes are used instead. If more - an error occurs.
+Run your commads in myshell.
+   ```bash
+   # simple command
+   ls
+   
+   # redirection
+   ls > t.txt
+   
+   # data redirection
+   ls | grep *.txt
+   
+   # background process
+   ls &
+   
+   # declare your env variable
+   VAR=$(echo "my var")
+   
+   # show the env variable
+   $VAR
+   
+   # use myls
+   myls
+   
+   # use mycat
+   mycat t.txt
+   ```
 
 Help flags `-h`/`--help` support is available.
