@@ -1,4 +1,4 @@
-# Lab 2 Option 3: Adder
+# Myshell Pipess
 
 ## Team
 
